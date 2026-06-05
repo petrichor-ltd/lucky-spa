@@ -14,8 +14,8 @@
   --stone: #d6c8b7;
   --charcoal: #191d18;
   --white: #ffffff;
-  --shadow: 0 22px 50px rgba(21, 52, 39, 0.18);
-  --line: rgba(21, 52, 39, 0.16);
+  --shadow: 0 18px 42px rgba(21, 52, 39, 0.14);
+  --line: rgba(21, 52, 39, 0.13);
   --radius: 8px;
   --max: 1180px;
   --header-height: 74px;
@@ -288,7 +288,7 @@ button {
 
 .button:hover,
 .button:focus-visible {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .button--primary {
@@ -388,7 +388,7 @@ button {
 
 .section--intro {
   background:
-    linear-gradient(180deg, var(--cream) 0%, var(--mist) 100%);
+    linear-gradient(180deg, var(--cream) 0%, #f9f6ee 52%, var(--mist) 100%);
 }
 
 .intro-grid {
@@ -453,8 +453,8 @@ button {
   display: grid;
   gap: 0;
   padding: 12px 0;
-  border-top: 1px solid rgba(21, 52, 39, 0.16);
-  border-bottom: 1px solid rgba(21, 52, 39, 0.16);
+  border-top: 1px solid rgba(21, 52, 39, 0.13);
+  border-bottom: 1px solid rgba(21, 52, 39, 0.13);
 }
 
 .sense-row {
@@ -607,9 +607,9 @@ button {
   gap: 8px;
   min-height: 148px;
   padding: 22px;
-  border: 1px solid rgba(255, 253, 247, 0.22);
+  border: 1px solid rgba(255, 253, 247, 0.18);
   border-radius: var(--radius);
-  background: rgba(255, 253, 247, 0.08);
+  background: rgba(255, 253, 247, 0.07);
 }
 
 .guide-links strong {
@@ -1167,10 +1167,10 @@ button {
   gap: 12px;
   min-height: 230px;
   padding: 24px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(21, 52, 39, 0.12);
   border-radius: var(--radius);
-  background: rgba(255, 250, 241, 0.84);
-  box-shadow: 0 14px 32px rgba(21, 52, 39, 0.08);
+  background: rgba(255, 253, 247, 0.78);
+  box-shadow: 0 10px 24px rgba(21, 52, 39, 0.06);
 }
 
 .resource-section--soft .resource-card {
@@ -1221,7 +1221,8 @@ button {
 .page-hero {
   padding: 80px 0 72px;
   background:
-    linear-gradient(90deg, rgba(36, 84, 62, 0.1), transparent 32%),
+    linear-gradient(90deg, rgba(36, 84, 62, 0.08), transparent 32%),
+    linear-gradient(180deg, var(--paper), var(--mist)),
     var(--mist);
 }
 
@@ -1262,7 +1263,7 @@ button {
   aspect-ratio: 1.22;
   border-radius: var(--radius);
   background: var(--stone);
-  box-shadow: var(--shadow);
+  box-shadow: 0 16px 36px rgba(21, 52, 39, 0.13);
 }
 
 .page-hero__media img {
@@ -1274,7 +1275,7 @@ button {
 
 .detail-section {
   padding: 82px 0;
-  background: var(--paper);
+  background: #fffdf7;
 }
 
 .detail-section--soft {
@@ -1291,7 +1292,7 @@ button {
 .detail-list {
   display: grid;
   gap: 0;
-  border-top: 1px solid rgba(21, 52, 39, 0.16);
+  border-top: 1px solid rgba(21, 52, 39, 0.13);
 }
 
 .detail-list article {
@@ -1373,8 +1374,8 @@ button {
 .course-list article,
 .number-grid article {
   border-radius: var(--radius);
-  border: 1px solid rgba(21, 52, 39, 0.14);
-  background: rgba(255, 253, 247, 0.78);
+  border: 1px solid rgba(21, 52, 39, 0.12);
+  background: rgba(255, 253, 247, 0.7);
 }
 
 .story-band .process-steps li {
