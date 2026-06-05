@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+
+# 原始素材與簡報僅供本機整理，不部署到 GitHub Pages。
+assets/resource/
+*.ppt
+*.pptx
+~$*
