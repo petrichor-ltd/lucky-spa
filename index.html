@@ -26,9 +26,10 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23153427'/%3E%3Cpath d='M32 10v44M22 18c10 4 10 12 10 23M42 18c-10 4-10 12-10 23M18 40c10-2 15 3 14 13M46 40c-10-2-15 3-14 13' stroke='%23fffaf1' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <script defer src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/homepage.css?v=20260701-2" />
+    <script defer src="assets/js/main.js?v=20260701-2"></script>
   </head>
-  <body>
+  <body class="home-page">
     <a class="skip-link" href="#main">跳到主要內容</a>
 
     <header class="site-header" data-header>
@@ -65,7 +66,7 @@
     </header>
 
     <main id="main">
-      <section class="hero" id="top">
+      <section class="hero home-hero" id="top">
         <picture class="hero__image" aria-hidden="true">
           <img src="assets/img/8FF1040E-0295-4F24-A9E4-1C1F6B51227F.png" alt="" />
         </picture>
@@ -73,412 +74,261 @@
 
         <div class="hero__inner">
           <div class="hero__content">
-            <h1>幸運竹 SPA</h1>
+            <h1>幸運竹 <span>SPA</span></h1>
+            <p class="home-hero__core">台灣幸運竹手技・五行芳療・量身照顧</p>
             <p class="hero__lead">
-              台灣幸運竹手技、經絡美容與五行芳療，為臉部 60-90 分鐘、身體 60-120 分鐘療程，建立從迎賓到居家建議的完整照顧。
+              臉部 60-90 分鐘、身體 60-120 分鐘。從迎賓、狀態判斷、精油與部位安排，到療程後建議，都依當下需要調整。
             </p>
             <div class="hero__entry" aria-label="今日入口">
-              <p>預約前可先用接球遊戲整理心情；抵達後，再由芳療師依身體狀態安排精油、部位與手技重點。</p>
+              <p>還不確定怎麼選，可以先來信說明時間與主要困擾；也可以先用接球遊戲整理今天的心情。</p>
               <div class="hero__entry-links">
                 <a href="mailto:ubodyspa@gmail.com">預約諮詢</a>
                 <a href="https://connact.my.canva.site/cah9p7fm1k7cdn3t" target="_blank" rel="noopener">接球遊戲</a>
               </div>
             </div>
-            <ol class="hero__path" aria-label="幸運竹 SPA 狀態路徑">
-              <li>
-                <span>01</span>
-                <strong>臉部</strong>
-                <em>60-90 分鐘美顏調理</em>
-              </li>
-              <li>
-                <span>02</span>
-                <strong>身體</strong>
-                <em>60-120 分鐘經絡舒壓</em>
-              </li>
-              <li>
-                <span>03</span>
-                <strong>承接</strong>
-                <em>精油、課程與居家建議</em>
-              </li>
+            <ol class="hero__path" aria-label="幸運竹 SPA 服務方向">
+              <li><span>01</span><strong>臉部調理</strong><em>光澤、膚觸、肩頸張力</em></li>
+              <li><span>02</span><strong>身體舒壓</strong><em>背肩、腿部、腹部或全身</em></li>
+              <li><span>03</span><strong>療程承接</strong><em>精油方向、居家照顧與回訪</em></li>
             </ol>
           </div>
         </div>
       </section>
 
-      <section class="ritual-strip" aria-label="幸運竹 SPA 入場儀式">
-        <div class="ritual-strip__inner">
-          <div class="ritual-strip__copy">
-            <span>Brand notes</span>
-            <p>讓幸運不只停在祝福，而是成為手上的溫度、香氣與服務秩序。</p>
-          </div>
-          <ol>
-            <li><span>3 年</span><strong>技術研究</strong></li>
-            <li><span>300 位</span><strong>顧客服務觀察</strong></li>
-            <li><span>2009</span><strong>幸運 SPA 商標專利權</strong></li>
-          </ol>
-        </div>
+      <section class="evidence-strip" aria-label="幸運竹 SPA 品牌發展脈絡">
+        <ol>
+          <li><span>2006</span><strong>技術研究起點</strong><em>從臨床服務累積觀察</em></li>
+          <li><span>3 年</span><strong>手技研發</strong><em>整理竹節、精油與部位節奏</em></li>
+          <li><span>300 位</span><strong>服務觀察</strong><em>以顧客回饋調整流程</em></li>
+          <li><span>2009</span><strong>商標與合作發展</strong><em>建立台灣 SPA 服務標記</em></li>
+        </ol>
       </section>
 
-      <section class="section service-menu-section" id="experience">
-        <div class="section__inner service-menu-layout">
-          <div class="section-copy section-copy--anchored">
-            <h2>流程清楚，身體才放心。</h2>
-            <p>
-              療程開始前，先確認時間、部位、精油、手技與收尾方式。清楚不是制式，而是讓人願意把身體交給專業。
-            </p>
-            <div class="sense-anchor">
-              <strong>每一次服務，都保留當下判斷。</strong>
-              <span>依身體狀態、膚況與當日需求微調。</span>
+      <section class="section dossier-section" id="experience">
+        <div class="section__inner dossier-grid">
+          <div class="dossier-intro">
+            <h2>先確認狀態，再選擇療程。</h2>
+            <p>初次到店不必先懂課程名稱。芳療師會依膚況、緊繃、可停留時間與當日感受，安排合適的服務內容。</p>
+            <div class="consultation-note">
+              <strong>第一次體驗</strong>
+              <span>建議預留諮詢與更衣時間；實際部位、精油與手技以現場判斷為準。</span>
             </div>
             <a class="text-link" href="experience.html">查看完整服務流程</a>
           </div>
-          <div class="service-menu" aria-label="幸運竹 SPA 服務項目">
-            <article class="service-course">
-              <div class="service-course__head">
-                <span>Face treatment</span>
-                <h3>臉部課程</h3>
-                <strong>60-90 分鐘</strong>
-              </div>
-              <ul>
-                <li><strong>迎賓放鬆</strong><span>背部放鬆、肩頸安撫，讓身體先降速。</span></li>
-                <li><strong>清潔整理</strong><span>卸妝、清潔、去角質、蒸臉與粉刺整理，依膚況調整。</span></li>
-                <li><strong>幸運竹手技</strong><span>熱蘊竹節搭配頸肩、前胸淋巴、手部與頭部放鬆。</span></li>
-                <li><strong>修護收尾</strong><span>導入、敷臉與保養品，讓膚況回到穩定光澤。</span></li>
-              </ul>
-            </article>
 
-            <article class="service-course">
-              <div class="service-course__head">
-                <span>Body treatment</span>
-                <h3>身體課程</h3>
-                <strong>60-120 分鐘</strong>
-              </div>
-              <ul>
-                <li><strong>狀態判斷</strong><span>諮詢、身體觀察與能量經絡檢測，確認加強部位。</span></li>
-                <li><strong>五行精油</strong><span>依木、火、土、金、水方向調配香氣與按摩節奏。</span></li>
-                <li><strong>熱敷開穴</strong><span>熱敷背、頭肩頸開穴，讓緊繃處先鬆開。</span></li>
-                <li><strong>竹節手法</strong><span>以幸運竹手法與部位選擇，處理壓力、代謝與曲線需求。</span></li>
-              </ul>
-            </article>
-          </div>
+          <article class="course-dossier">
+            <img src="assets/img/D8EFC42A-FCB9-4409-BA5C-D3572BD7121E.png" alt="幸運竹 SPA 臉部竹節舒緩手技" loading="lazy" />
+            <div class="course-dossier__heading">
+              <span>Face treatment</span>
+              <h3>臉部課程</h3>
+              <strong>60-90 分鐘</strong>
+            </div>
+            <dl>
+              <div><dt>適合狀態</dt><dd>暗沉、乾燥、毛孔、膚觸不穩或肩頸張力。</dd></div>
+              <div><dt>服務構成</dt><dd>迎賓放鬆、清潔整理、幸運竹手技、導入敷臉與修護收尾。</dd></div>
+              <div><dt>主要部位</dt><dd>臉部、頸肩、前胸淋巴、手部與頭部。</dd></div>
+              <div><dt>安排方式</dt><dd>去角質、粉刺整理與保養品依膚況調整，不做固定套版。</dd></div>
+            </dl>
+          </article>
+
+          <article class="course-dossier">
+            <img src="assets/img/A3C2ABF3-3B12-4605-B945-E63F8623C5A9.png" alt="幸運竹 SPA 腹部與身體竹節調理" loading="lazy" />
+            <div class="course-dossier__heading">
+              <span>Body treatment</span>
+              <h3>身體課程</h3>
+              <strong>60-120 分鐘</strong>
+            </div>
+            <dl>
+              <div><dt>適合狀態</dt><dd>疲累、沉重、背肩緊繃、循環緩慢或需要深度休息。</dd></div>
+              <div><dt>服務構成</dt><dd>狀態判斷、五行精油、熱敷開穴、幸運竹部位手法與安撫收尾。</dd></div>
+              <div><dt>主要部位</dt><dd>背肩、頭頸、腿部、腹部或全身，依時間與需要安排。</dd></div>
+              <div><dt>安排方式</dt><dd>力道、溫度與按摩節奏依身體反應微調，保留現場判斷。</dd></div>
+            </dl>
+          </article>
         </div>
       </section>
 
-      <section class="section tech-section" id="tech" aria-labelledby="tech-title">
-        <div class="section__inner tech-layout">
-          <div class="tech-copy">
-            <h2 id="tech-title">科技感退到背景，照顧留在前面。</h2>
-            <p>
-              面向科技與 AI 團隊時，真正建立信任的不是炫目的介面，而是乾淨、準時、可說明的服務流程。接球遊戲只是入口，讓顧客更容易說出今天的狀態。
-            </p>
-            <div class="tech-points" aria-label="科技體驗重點">
-              <span>接待流程清楚</span>
-              <span>狀態入口輕盈</span>
-              <span>療程仍由人判斷</span>
+      <section class="tech-journal" id="tech" aria-labelledby="tech-title">
+        <div class="section__inner tech-journal__grid">
+          <div class="tech-journal__copy">
+            <h2 id="tech-title">科技把資訊整理好，療程仍由人判斷。</h2>
+            <p>心情選擇、到店接待、狀態紀錄與環境感控協助降低不確定感；芳療師再依膚況、緊繃與當日需要安排。</p>
+            <ol class="service-chain">
+              <li><span>01</span><strong>先選狀態</strong><em>從遊戲或五行方向找到入口。</em></li>
+              <li><span>02</span><strong>現場確認</strong><em>確認部位、香氣、時間與舒適度。</em></li>
+              <li><span>03</span><strong>療程承接</strong><em>把感受轉成手技、居家建議與回訪。</em></li>
+            </ol>
+            <p class="tech-journal__note">數位工具提供一致的資訊入口，不取代芳療師的觀察與專業判斷。</p>
+          </div>
+
+          <div class="tech-media" aria-label="幸運竹 SPA 數位與療程場域">
+            <figure class="tech-media__primary">
+              <img src="assets/img/8FF1040E-0295-4F24-A9E4-1C1F6B51227F.png" alt="幸運竹 SPA 心情選擇與智能接待空間" loading="lazy" />
+              <figcaption>心情選擇與智能接待</figcaption>
+            </figure>
+            <div class="tech-media__rail">
+              <figure><img src="assets/img/5D201EBA-215D-462D-8BEA-45C6744D9DAC.png" alt="五感療程空間" loading="lazy" /><figcaption>五感空間</figcaption></figure>
+              <figure><img src="assets/img/423BAFA8-3329-4F00-B79D-762493D179FE.png" alt="衛生與環境感控空間" loading="lazy" /><figcaption>環境感控</figcaption></figure>
+              <figure><img src="assets/img/549A28E1-1E7C-49CC-8EEA-E7A3C28204A7.png" alt="背部幸運竹手技" loading="lazy" /><figcaption>竹節手技</figcaption></figure>
+              <figure><img src="assets/img/A3C2ABF3-3B12-4605-B945-E63F8623C5A9.png" alt="腹部幸運竹調理" loading="lazy" /><figcaption>腹部調理</figcaption></figure>
+              <figure><img src="assets/img/D8EFC42A-FCB9-4409-BA5C-D3572BD7121E.png" alt="臉部幸運竹舒緩" loading="lazy" /><figcaption>臉部舒緩</figcaption></figure>
             </div>
           </div>
-          <div class="tech-gallery" aria-label="幸運竹 SPA 科技與療癒場域">
-            <figure>
-              <img src="assets/img/8FF1040E-0295-4F24-A9E4-1C1F6B51227F.png" alt="幸運竹 SPA 智能接待與心情選擇場域" loading="lazy" />
-              <figcaption>智能接待</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/img/5D201EBA-215D-462D-8BEA-45C6744D9DAC.png" alt="幸運竹 SPA 科技感雙人療程空間" loading="lazy" />
-              <figcaption>五感客廳</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/img/423BAFA8-3329-4F00-B79D-762493D179FE.png" alt="幸運竹 SPA 智能衛生與感控設備" loading="lazy" />
-              <figcaption>感控設備</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/img/549A28E1-1E7C-49CC-8EEA-E7A3C28204A7.png" alt="幸運竹 SPA 幸運竹手技療程" loading="lazy" />
-              <figcaption>竹節手技</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/img/A3C2ABF3-3B12-4605-B945-E63F8623C5A9.png" alt="幸運竹 SPA 腹部幸運竹療程" loading="lazy" />
-              <figcaption>能量調理</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/img/D8EFC42A-FCB9-4409-BA5C-D3572BD7121E.png" alt="幸運竹 SPA 臉部幸運竹療癒手技" loading="lazy" />
-              <figcaption>臉部舒緩</figcaption>
-            </figure>
-          </div>
         </div>
       </section>
 
-      <section class="section origin-section" id="origin">
-        <div class="section__inner origin-layout">
-          <div class="origin-media">
-            <img src="assets/img/5D201EBA-215D-462D-8BEA-45C6744D9DAC.png" alt="幸運竹 SPA 兼具科技感與療癒感的雙人療程空間" loading="lazy" />
+      <section class="section craft-journal" id="origin">
+        <div class="section__inner craft-journal__grid">
+          <div class="craft-journal__media">
+            <img src="assets/img/549A28E1-1E7C-49CC-8EEA-E7A3C28204A7.png" alt="芳療師使用溫熱幸運竹梳理背部" loading="lazy" />
           </div>
-          <div class="origin-copy">
-            <h2>幸運竹的意象，最後要回到手上的溫度。</h2>
-            <p>
-              幸運竹取其生命力、向上、潔淨與節節高陞的意象；服務上，則以竹節梳理經絡氣結，搭配芳香精油、身體觀察與部位判斷，形成台灣式 SPA 語言。
-            </p>
-            <div class="origin-points" aria-label="幸運竹 SPA 品牌脈絡">
-              <div>
-                <strong>3 年</strong>
-                <span>技術研究與臨床服務累積</span>
-              </div>
-              <div>
-                <strong>300 位</strong>
-                <span>美容顧客服務觀察</span>
-              </div>
-              <div>
-                <strong>MIT</strong>
-                <span>台灣美容 SPA 服務標的</span>
-              </div>
+          <div class="craft-journal__copy">
+            <h2>台灣幸運竹，把文化落到手技。</h2>
+            <p>幸運竹象徵生命力、潔淨、韌性與向上生長。服務上不把文化停在命名，而是讓它進入溫度、部位、香氣與顧客溝通。</p>
+            <div class="craft-context" aria-label="幸運竹手技原則">
+              <p><strong>手技原則</strong><span>梳理而不是刺激；以溫度、節奏與部位選擇，協助身體慢慢鬆開。</span></p>
+              <p><strong>服務邏輯</strong><span>把美容、經絡、芳療與諮詢整合成一次可被理解、可被延續的照顧。</span></p>
             </div>
-            <a class="text-link" href="courses.html">看課程與精油脈絡</a>
+            <dl class="craft-specification">
+              <div><dt>熱蘊竹節</dt><dd><strong>約 38-42 度</strong><span>以溫度與竹節梳理緊繃，讓身體先願意放鬆。</span></dd></div>
+              <div><dt>五行精油</dt><dd><strong>木・火・土・金・水</strong><span>協助顧客描述狀態，也讓芳療師找到香氣方向。</span></dd></div>
+              <div><dt>量身安排</dt><dd><strong>部位・力道・節奏</strong><span>依膚況、壓力位置與身體反應調整手法。</span></dd></div>
+              <div><dt>療程之後</dt><dd><strong>居家提醒與回訪</strong><span>說明今日重點、先做什麼，以及下次可從哪裡延伸。</span></dd></div>
+            </dl>
+            <a class="text-link" href="courses.html">閱讀幸運竹與五行精油</a>
           </div>
         </div>
       </section>
 
-      <section class="section programs-section" id="programs">
-        <div class="section__inner programs-layout">
-          <div class="programs-copy">
-            <h2>節氣不是主題，是身體的時間表。</h2>
-            <p>
-              臉部、身體、精油與竹節手法，會依膚況、緊繃與當季感受安排。名稱要有記憶點，服務更要落在身體上。
-            </p>
-            <ul class="craft-list">
-              <li>
-                <strong>熱蘊竹節</strong>
-                <span>約 38-42 度的竹節溫度，讓身體先願意放鬆。</span>
-              </li>
-              <li>
-                <strong>五行精油</strong>
-                <span>木、火、土、金、水五款香氣，協助芳療師找到照顧方向。</span>
-              </li>
-              <li>
-                <strong>量身安排</strong>
-                <span>從諮詢、加強部位到居家提醒，讓療程不只停在當下。</span>
-              </li>
-            </ul>
-            <a class="text-link" href="courses.html">深入閱讀課程內容</a>
+      <section class="section program-reference" id="programs">
+        <div class="section__inner">
+          <div class="reference-heading">
+            <h2>節氣提供時間感，身體決定今天的安排。</h2>
+            <p>課程名稱幫助記憶；真正的選擇仍回到膚況、循環、壓力位置與可停留時間。精油也不是單獨販售的氣味，而是療程判斷的一部分。</p>
           </div>
 
-          <div class="programs-media">
-            <img src="assets/img/549A28E1-1E7C-49CC-8EEA-E7A3C28204A7.png" alt="幸運竹 SPA 幸運竹手技與暖光療程空間" />
-          </div>
+          <div class="reference-grid">
+            <section class="season-reference" aria-labelledby="spring-summer-heading">
+              <h3 id="spring-summer-heading">春夏課程</h3>
+              <ol>
+                <li><span>立春</span><strong>節節高陞</strong><em>臉部明亮</em></li>
+                <li><span>驚蟄</span><strong>竹報平安</strong><em>背肩釋放</em></li>
+                <li><span>清明</span><strong>竹步高升</strong><em>腿部循環</em></li>
+                <li><span>立夏</span><strong>胸有成竹</strong><em>上身舒展</em></li>
+                <li><span>芒種</span><strong>笑顏竹開</strong><em>腹部曲線</em></li>
+                <li><span>小暑</span><strong>竹部初護</strong><em>夏日膚觸</em></li>
+              </ol>
+            </section>
 
-          <div class="course-grid course-grid--seasonal" aria-label="幸運竹 SPA 課程範例">
-            <article class="course-feature">
-              <span>Seasonal ritual</span>
-              <h3>節氣養護課程</h3>
-              <p>以季節、膚況、循環與壓力位置作為判斷，安排臉部光澤、背肩釋放、腿部代謝、腹部曲線或能量調理。</p>
-              <dl class="course-feature__meta" aria-label="節氣課程設計">
-                <div>
-                  <dt>12</dt>
-                  <dd>節氣主題</dd>
-                </div>
-                <div>
-                  <dt>5</dt>
-                  <dd>精油方向</dd>
-                </div>
-                <div>
-                  <dt>1:1</dt>
-                  <dd>現場判斷</dd>
-                </div>
+            <section class="season-reference" aria-labelledby="autumn-winter-heading">
+              <h3 id="autumn-winter-heading">秋冬課程</h3>
+              <ol>
+                <li><span>立秋</span><strong>平佈輕勻</strong><em>淨化雕塑</em></li>
+                <li><span>白露</span><strong>清竹冉梳</strong><em>代謝梳理</em></li>
+                <li><span>寒露</span><strong>勢如破竹</strong><em>脈輪平衡</em></li>
+                <li><span>立冬</span><strong>慈竹長青</strong><em>保濕修護</em></li>
+                <li><span>大雪</span><strong>竹離矛赦</strong><em>能量按摩</em></li>
+                <li><span>小寒</span><strong>敲竹槓</strong><em>年度調理</em></li>
+              </ol>
+            </section>
+
+            <aside class="oil-reference" aria-labelledby="oil-reference-heading">
+              <h3 id="oil-reference-heading">五行精油參考</h3>
+              <dl>
+                <div><dt>木</dt><dd><strong>提振舒展</strong><span>疲累、低能量、需要重新啟動</span><small>檀香、廣藿香、天竺葵、綠花白千層</small></dd></div>
+                <div><dt>火</dt><dd><strong>循環活力</strong><span>精神沉重、循環緩慢、需要溫度</span><small>羅勒、絲柏、薰衣草、馬鬱蘭、松樹、迷迭香</small></dd></div>
+                <div><dt>土</dt><dd><strong>穩定暖腹</strong><span>焦慮、消化與腹部緊繃</span><small>羅勒、安息香、快樂鼠尾草、薑、甜橙、岩蘭草</small></dd></div>
+                <div><dt>金</dt><dd><strong>清理專注</strong><span>卡住、沉積、需要整理</span><small>天竺葵、樺樹、杜松莓、廣藿香</small></dd></div>
+                <div><dt>水</dt><dd><strong>流動修護</strong><span>乾燥、疲態、需要滋養</span><small>玫瑰、胡蘿蔔籽、依蘭、天竺葵</small></dd></div>
               </dl>
-            </article>
-
-            <div class="course-cluster" aria-label="春夏節氣課程">
-              <article>
-                <span>立春</span>
-                <h3>節節高陞</h3>
-                <p>整理臉部氣色，帶出乾淨明亮感。</p>
-              </article>
-              <article>
-                <span>驚蟄</span>
-                <h3>竹報平安</h3>
-                <p>釋放背肩承載，讓呼吸變深。</p>
-              </article>
-              <article>
-                <span>清明</span>
-                <h3>竹步高升</h3>
-                <p>帶動腿部循環，找回輕盈步伐。</p>
-              </article>
-              <article>
-                <span>立夏</span>
-                <h3>胸有成竹</h3>
-                <p>整理胸口與上身淋巴，打開胸廓。</p>
-              </article>
-              <article>
-                <span>芒種</span>
-                <h3>笑顏竹開</h3>
-                <p>照顧腹部曲線與消化型緊繃。</p>
-              </article>
-              <article>
-                <span>小暑</span>
-                <h3>竹部初護</h3>
-                <p>去角質與膚觸整理，為夏日留白。</p>
-              </article>
-            </div>
-
-            <div class="course-cluster" aria-label="秋冬節氣課程">
-              <article>
-                <span>立秋</span>
-                <h3>平佈輕勻</h3>
-                <p>淨化雕塑，讓身體線條回到順流。</p>
-              </article>
-              <article>
-                <span>白露</span>
-                <h3>清竹冉梳</h3>
-                <p>梳理代謝節奏，減少身體沉重感。</p>
-              </article>
-              <article>
-                <span>寒露</span>
-                <h3>勢如破竹</h3>
-                <p>平衡脈輪與情緒張力，穩住內在節奏。</p>
-              </article>
-              <article>
-                <span>立冬</span>
-                <h3>慈竹長青</h3>
-                <p>保濕抗老，讓肌膚回到柔潤支撐。</p>
-              </article>
-              <article>
-                <span>大雪</span>
-                <h3>竹離矛赦</h3>
-                <p>以能量按摩鬆開累積壓力。</p>
-              </article>
-              <article>
-                <span>小寒</span>
-                <h3>敲竹槓</h3>
-                <p>年度會員調理，整理整年保養節奏。</p>
-              </article>
-            </div>
+            </aside>
           </div>
+          <a class="text-link reference-link" href="courses.html">查看完整課程與精油資料</a>
         </div>
       </section>
 
-      <section class="section media-section" id="journey">
-        <div class="section__inner journey-layout">
-          <div class="journey-copy">
-            <h2>服務有秩序，身體才會安心。</h2>
-            <p>
-              好的美業服務不靠話術撐場，而是每一步都有人承接。從迎賓到送客，顧客知道自己被看見，也知道接下來會發生什麼。
-            </p>
-            <a class="text-link" href="img/198BA5E9-F894-4D27-A83D-16D533ABD451.png" target="_blank" rel="noopener">開啟完整流程圖</a>
+      <section class="section service-standard" id="journey">
+        <div class="section__inner">
+          <div class="reference-heading">
+            <h2>美業標準，藏在每一個小動作裡。</h2>
+            <p>顧客在每一步都知道現在在哪裡、接下來會發生什麼，也知道自己的需求被記得。清楚的流程不是制式，而是降低第一次體驗的不確定感。</p>
           </div>
 
-          <div class="standard-board" aria-label="美業服務標準流程">
+          <div class="service-standard__grid" aria-label="幸運竹 SPA 服務標準">
             <article>
-              <span>抵達</span>
-              <h3>讓人先被接住</h3>
-              <ol>
-                <li><strong>迎賓</strong><em>主動迎接，眼神與問候先到。</em></li>
-                <li><strong>入座</strong><em>確認顧客、芳療師與動線。</em></li>
-                <li><strong>茶水</strong><em>讓身體慢下來，再談需要。</em></li>
-              </ol>
+              <div class="service-standard__head"><span>01</span><h3>抵達・迎賓安定</h3></div>
+              <ul>
+                <li><strong>迎賓</strong><span>主動迎接、確認姓名與預約內容。</span></li>
+                <li><strong>入座</strong><span>安排芳療師、座位與行走動線。</span></li>
+                <li><strong>茶水</strong><span>讓身體先慢下來，再開始談需要。</span></li>
+              </ul>
             </article>
-
             <article>
-              <span>療程前</span>
-              <h3>把需求說清楚</h3>
-              <ol>
-                <li><strong>諮詢</strong><em>確認膚況、身體與加強部位。</em></li>
-                <li><strong>準備</strong><em>床位、衣物、溫度、音樂與光線。</em></li>
-                <li><strong>執行</strong><em>以精油、熱敷與竹節手技進入療程。</em></li>
-              </ol>
+              <div class="service-standard__head"><span>02</span><h3>療程前・諮詢準備</h3></div>
+              <ul>
+                <li><strong>諮詢</strong><span>確認膚況、身體與需要加強的部位。</span></li>
+                <li><strong>準備</strong><span>衣物、床位、溫度、音樂、光線與隱私。</span></li>
+                <li><strong>執行</strong><span>依判斷安排精油、熱敷與竹節手技。</span></li>
+              </ul>
             </article>
-
             <article>
-              <span>離店前</span>
-              <h3>讓照顧延續</h3>
-              <ol>
-                <li><strong>安撫</strong><em>熱毛巾與肩背收尾，回到清醒。</em></li>
-                <li><strong>建議</strong><em>提醒居家保養與下次重點。</em></li>
-                <li><strong>送客</strong><em>完成回饋，親自送到門口。</em></li>
-              </ol>
+              <div class="service-standard__head"><span>03</span><h3>離店前・安撫延續</h3></div>
+              <ul>
+                <li><strong>安撫</strong><span>熱毛巾與肩背收尾，讓身體回到清醒。</span></li>
+                <li><strong>建議</strong><span>說明今日重點、居家保養與注意事項。</span></li>
+                <li><strong>送客</strong><span>完成回饋，整理下一次可延伸的方向。</span></li>
+              </ul>
             </article>
           </div>
+          <a class="text-link" href="experience.html">閱讀完整服務細節</a>
         </div>
       </section>
 
-      <section class="section game-section" id="game">
-        <div class="section__inner game-layout">
-          <div class="game-copy">
-            <h2>遊戲是諮詢前的破冰，不取代芳療師。</h2>
-            <p>
-              接球遊戲讓顧客先選主題、接住能量球，把不容易開口的心情轉成可討論的文字。到店後，芳療師再把結果接到精油、部位與居家建議。
-            </p>
-            <div class="game-actions">
-              <a class="button button--primary" href="https://connact.my.canva.site/cah9p7fm1k7cdn3t" target="_blank" rel="noopener">
-                前往接球遊戲
-              </a>
-              <a class="button button--ghost-dark" href="#result">查看結果範例</a>
-            </div>
+      <section class="game-consultation" id="game">
+        <div class="section__inner game-consultation__grid">
+          <div class="game-consultation__copy">
+            <h2>接住一顆球，也接住今天不容易說出口的感受。</h2>
+            <p>選擇家庭、工作、財運或人際主題，完成接球後得到一段狀態文字；到店後，再由芳療師轉成精油、部位與身體照顧。</p>
+            <a class="button button--primary" href="https://connact.my.canva.site/cah9p7fm1k7cdn3t" target="_blank" rel="noopener">開始接球遊戲</a>
+            <ol class="game-path" aria-label="遊戲到療程的四個步驟">
+              <li><span>01</span><strong>選擇主題</strong><em>找到最近最在意的方向</em></li>
+              <li><span>02</span><strong>完成接球</strong><em>用輕鬆方式靠近感受</em></li>
+              <li><span>03</span><strong>閱讀狀態</strong><em>取得一段可討論的文字</em></li>
+              <li><span>04</span><strong>現場承接</strong><em>轉成部位、香氣與建議</em></li>
+            </ol>
+            <p class="game-disclaimer">遊戲結果是諮詢入口，不取代現場身體觀察與專業判斷。</p>
           </div>
 
-          <div class="game-preview" aria-label="能量接球遊戲示意">
-            <div class="game-preview__top">
-              <span>能量值 <strong>86</strong></span>
-              <span>剩餘時間 <strong>18s</strong></span>
-            </div>
-            <div class="falling-field" aria-hidden="true">
-              <span class="energy-ball energy-ball--green"></span>
-              <span class="energy-ball energy-ball--amber"></span>
-              <span class="energy-ball energy-ball--sage"></span>
-              <span class="energy-ball energy-ball--copper"></span>
-              <span class="basket"></span>
-            </div>
-            <p>遊戲結果只作為溝通入口，真正療程仍以現場諮詢與身體狀態為準。</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section result-section" id="result">
-        <div class="section__inner result-layout">
-          <div class="result-copy">
-            <h2>結果要回到服務安排，而不是只停在文字。</h2>
-            <p>
-              每一段解讀都需要回到美業服務：最近狀態、建議部位、精油方向、居家提醒。這樣顧客才知道下一步可以怎麼照顧自己。
-            </p>
+          <div class="result-panel" id="result">
             <div class="theme-switcher" role="tablist" aria-label="切換結果主題">
               <button class="theme-button is-active" type="button" role="tab" aria-selected="true" data-theme="family">家庭</button>
               <button class="theme-button" type="button" role="tab" aria-selected="false" data-theme="work">工作</button>
               <button class="theme-button" type="button" role="tab" aria-selected="false" data-theme="wealth">財運</button>
               <button class="theme-button" type="button" role="tab" aria-selected="false" data-theme="social">人際</button>
             </div>
-            <a class="text-link" href="insights.html">查看完整結果設計</a>
+            <article class="reading-card" aria-live="polite">
+              <span class="reading-card__label">狀態解讀示例</span>
+              <h3 data-result-title>你最近比較像家裡的隊長，很多事都放在心裡自己處理。</h3>
+              <dl>
+                <div><dt>家庭狀態</dt><dd data-result-state>什麼都想自己扛</dd></div>
+                <div><dt>特質觀察</dt><dd data-result-focus>習慣先處理責任，較少替自己保留恢復空間。</dd></div>
+                <div><dt>建議部位</dt><dd data-result-need>背部、肩頸與腹部放鬆</dd></div>
+                <div><dt>精油方向</dt><dd data-result-trait>土系穩定或木系提振，依現場諮詢調整。</dd></div>
+                <div><dt>居家提醒</dt><dd data-result-advice>保留一段不被打斷的休息時間，讓身體慢慢回穩。</dd></div>
+              </dl>
+            </article>
+            <a class="text-link result-link" href="insights.html">了解結果如何延伸成療程建議</a>
           </div>
-
-          <article class="reading-card" aria-live="polite">
-            <span class="reading-card__label">能量解讀範例</span>
-            <h3 data-result-title>你最近比較像家裡的隊長，很多事都放在心裡自己處理。</h3>
-            <dl>
-              <div>
-                <dt>家庭狀態</dt>
-                <dd data-result-state>什麼都想自己扛</dd>
-              </div>
-              <div>
-                <dt>建議部位</dt>
-                <dd data-result-need>背部、肩頸與腹部放鬆</dd>
-              </div>
-              <div>
-                <dt>精油方向</dt>
-                <dd data-result-trait>土系穩定或木系提振，依現場諮詢調整。</dd>
-              </div>
-              <div>
-                <dt>居家提醒</dt>
-                <dd data-result-advice>保留一段不被打斷的休息時間，讓身體慢慢回穩。</dd>
-              </div>
-            </dl>
-          </article>
         </div>
       </section>
 
-      <section class="contact-section" id="contact">
+      <section class="contact-section home-contact" id="contact">
         <div class="contact-section__image" aria-hidden="true">
-          <img src="img/contact-entrance-crop.jpg" alt="" />
+          <img src="img/hero-reception-crop.jpg" alt="" />
         </div>
         <div class="contact-section__content">
-          <h2>讓今天的狀態，被好好接住。</h2>
-          <p>
-            療程、合作與預約，歡迎來信。
-          </p>
+          <h2>療程、企業合作與預約，<br />都從理解需求開始。</h2>
+          <p>來信時可先告訴我們：希望安排的時間、人數，以及最想照顧的狀態。合作可依場域規劃快速體驗、專業療程或教育訓練。</p>
           <a class="button button--light" href="mailto:ubodyspa@gmail.com">Contact Us</a>
         </div>
       </section>
