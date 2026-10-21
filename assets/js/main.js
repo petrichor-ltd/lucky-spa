@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
@@ -11,22 +13,52 @@ setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
 if (nav && navToggle && header) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
+  const mobileNavigation = window.matchMedia("(max-width: 980px)");
+  nav.id ||= "site-navigation";
+  navToggle.setAttribute("aria-controls", nav.id);
+
+  const setNavigationOpen = (open, returnFocus = false) => {
+    const isOpen = open && mobileNavigation.matches;
+    nav.classList.toggle("is-open", isOpen);
     header.classList.toggle("is-open", isOpen);
     document.body.classList.toggle("nav-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
     navToggle.setAttribute("aria-label", isOpen ? "關閉選單" : "開啟選單");
+    nav.inert = mobileNavigation.matches && !isOpen;
+
+    if (returnFocus && mobileNavigation.matches) navToggle.focus();
+  };
+
+  setNavigationOpen(false);
+
+  navToggle.addEventListener("click", () => {
+    setNavigationOpen(!nav.classList.contains("is-open"));
   });
 
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      header.classList.remove("is-open");
-      document.body.classList.remove("nav-open");
-      navToggle.setAttribute("aria-expanded", "false");
-      navToggle.setAttribute("aria-label", "開啟選單");
+      setNavigationOpen(false, true);
     });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("is-open")) {
+      event.preventDefault();
+      setNavigationOpen(false, true);
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!header.contains(event.target)) setNavigationOpen(false);
+  });
+
+  document.addEventListener("focusin", (event) => {
+    if (!header.contains(event.target)) setNavigationOpen(false);
+  });
+
+  mobileNavigation.addEventListener("change", () => {
+    const focusWillBeHidden = mobileNavigation.matches && nav.contains(document.activeElement);
+    setNavigationOpen(false, focusWillBeHidden);
   });
 }
 
@@ -69,33 +101,75 @@ const readings = {
   }
 };
 
-const themeButtons = document.querySelectorAll("[data-theme]");
-const titleNode = document.querySelector("[data-result-title]");
-const stateLabelNode = document.querySelector(".reading-card dt");
-const stateNode = document.querySelector("[data-result-state]");
-const focusNode = document.querySelector("[data-result-focus]");
-const needNode = document.querySelector("[data-result-need]");
-const traitNode = document.querySelector("[data-result-trait]");
-const adviceNode = document.querySelector("[data-result-advice]");
+document.querySelectorAll(".theme-switcher").forEach((tablist, listIndex) => {
+  const themeButtons = [...tablist.querySelectorAll("[data-theme]")].filter(
+    (button) => Object.hasOwn(readings, button.dataset.theme)
+  );
+  const panel = tablist.parentElement?.querySelector(".reading-card");
+  if (!panel || !themeButtons.length) return;
 
-themeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const key = button.dataset.theme;
-    const reading = readings[key];
-    if (!reading) return;
+  const fields = {
+    title: panel.querySelector("[data-result-title]"),
+    label: panel.querySelector("dt"),
+    state: panel.querySelector("[data-result-state]"),
+    focus: panel.querySelector("[data-result-focus]"),
+    need: panel.querySelector("[data-result-need]"),
+    trait: panel.querySelector("[data-result-trait]"),
+    advice: panel.querySelector("[data-result-advice]")
+  };
+  if (Object.values(fields).some((node) => !node)) return;
 
+  tablist.setAttribute("role", "tablist");
+  panel.id ||= `reading-panel-${listIndex + 1}`;
+  panel.setAttribute("role", "tabpanel");
+  panel.tabIndex = 0;
+
+  const activateTheme = (button, moveFocus = false) => {
+    const reading = readings[button.dataset.theme];
     themeButtons.forEach((item) => {
       const selected = item === button;
       item.classList.toggle("is-active", selected);
       item.setAttribute("aria-selected", String(selected));
+      item.tabIndex = selected ? 0 : -1;
     });
 
-    titleNode.textContent = reading.title;
-    stateLabelNode.textContent = reading.label;
-    stateNode.textContent = reading.state;
-    focusNode.textContent = reading.focus;
-    needNode.textContent = reading.need;
-    traitNode.textContent = reading.trait;
-    adviceNode.textContent = reading.advice;
+    panel.setAttribute("aria-labelledby", button.id);
+    Object.entries(fields).forEach(([key, node]) => {
+      node.textContent = reading[key];
+    });
+    if (moveFocus) button.focus();
+  };
+
+  themeButtons.forEach((button, index) => {
+    button.id ||= `reading-tab-${listIndex + 1}-${button.dataset.theme}`;
+    button.setAttribute("role", "tab");
+    button.setAttribute("aria-controls", panel.id);
+    button.addEventListener("click", () => activateTheme(button));
+    button.addEventListener("keydown", (event) => {
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      let nextIndex;
+
+      switch (event.key) {
+        case "ArrowRight":
+          nextIndex = (index + 1) % themeButtons.length;
+          break;
+        case "ArrowLeft":
+          nextIndex = (index - 1 + themeButtons.length) % themeButtons.length;
+          break;
+        case "Home":
+          nextIndex = 0;
+          break;
+        case "End":
+          nextIndex = themeButtons.length - 1;
+          break;
+        default:
+          return;
+      }
+
+      event.preventDefault();
+      activateTheme(themeButtons[nextIndex], true);
+    });
   });
+
+  activateTheme(themeButtons.find((button) => button.getAttribute("aria-selected") === "true") || themeButtons[0]);
 });
